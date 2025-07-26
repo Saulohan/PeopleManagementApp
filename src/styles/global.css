@@ -1,0 +1,116 @@
+html {
+  box-sizing: border-box;
+  touch-action: manipulation;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button, 
+a, 
+[role="button"],
+input[type="button"],
+input[type="submit"] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input, 
+select, 
+textarea {
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .btn-full-mobile {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media screen and (max-width: 425px) {
+  .mobile-only {
+    display: initial;
+  }
+  
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .mobile-hide {
+    display: none !important;
+  }
+}
+
+@media (hover: none) {
+  a:hover,
+  button:hover {
+    transition: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  body {
+    background-color: white;
+    color: black;
+  }
+}
